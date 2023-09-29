@@ -11,6 +11,7 @@ use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 
 /**
  * @extends ServiceEntityRepository<Admin>
+ * @implements PasswordUpgraderInterface<Admin>
  *
  * @method Admin|null find($id, $lockMode = null, $lockVersion = null)
  * @method Admin|null findOneBy(array $criteria, array $orderBy = null)
@@ -41,10 +42,6 @@ class AdminRepository extends ServiceEntityRepository implements PasswordUpgrade
             $this->getEntityManager()->flush();
         }
     }
-
-    /**
-     * Used to upgrade (rehash) the user's password automatically over time.
-     */
     public function upgradePassword(PasswordAuthenticatedUserInterface $user, string $newHashedPassword): void
     {
         if (!$user instanceof Admin) {

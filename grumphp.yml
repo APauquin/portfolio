@@ -9,7 +9,7 @@ grumphp:
         phpcs:
             standard: ~
         phpstan:
-            configuration: ./phpstan.neon
+            configuration: ./phpstan.dist.neon
             level: 6
         phpmd:
             whitelist_patterns:
@@ -18,4 +18,6 @@ grumphp:
                 - '\src\Kernel.php'
             ruleset:
                 - 'phpmd.xml'
+        phpunit:
+            always_execute: true
 

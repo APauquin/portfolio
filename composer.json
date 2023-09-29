@@ -1,4 +1,6 @@
 {
+    "name": "pauquin-alexandre/portfolio",
+    "description": "My first portfolio website for my cv",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
@@ -95,8 +97,12 @@
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "phpmd/phpmd": "^2.14",
         "phpro/grumphp": "^2.0",
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^9.5",
+        "sebastian/phpcpd": "^6.0",
+        "squizlabs/php_codesniffer": "^3.7",
         "symfony/browser-kit": "6.3.*",
         "symfony/css-selector": "6.3.*",
         "symfony/debug-bundle": "6.3.*",
