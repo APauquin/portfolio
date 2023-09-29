@@ -1,0 +1,87 @@
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-gradient-reversed">
+    <div class="container-fluid flex-nowrap">
+        <div class="d-flex justify-content-around position-static z-1">
+            <a class="navbar-brand" href="/">
+                <img src="{{ asset('/build/images/logo_sm_light.png') | imagine_filter('thumb') }}" loading="lazy"
+                     class="d-inline-block align-top" alt="Pauquin Alexandre logo">
+            </a>
+            <input type="checkbox" id="toggle-check">
+            <label for="toggle-check" class="toggle-label d-flex justify-content-center align-content-center">
+                <div class="toggle-container">
+                    <div class="toggle-dark-icon icon">
+                        <i class="fa-regular fa-moon"></i>
+                    </div>
+                    <div class="toggle-light-icon icon">
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                    <div class="toggle-circle"></div>
+                </div>
+            </label>
+        </div>
+        <div class="d-flex justify-content-end position-static z-1">
+            <div class="d-flex justify-content-end">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown"
+                        aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center desktopVersion">
+                <ul class="navbar-nav" id="navbar">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#landing">{{ 'home'|trans }}</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about">{{ 'about'|trans }}</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#projects">{{ 'projects'|trans }}</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#contact">{{ 'contact'|trans }}</a>
+                    </li>
+                    {% if app.user %}
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('app_logout') }}">Admin area</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('app_logout') }}">Log out</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item active">
+                        <a class="nav-link"
+                           href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': app.request.locale == 'en' ? null : 'en'})) }}">
+                            <img class="langFlag" src="{{ asset('build/images/fr_en_flag.jpg')| imagine_filter('optimised') }}" alt="">
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="collapse fixed-top mobileDropdown position-absolute z-0 mobileVersion" id="navbarNavDropdown">
+            <ul class="navbar-nav d-flex flex-column  h-100 justify-content-between align-items-center">
+                <li class="nav-item-mobile active">
+                    <a class="nav-link" href="#landing">{{ 'home'|trans }}</a>
+                </li>
+                <li class="nav-item-mobile active">
+                    <a class="nav-link" href="#about">{{ 'about'|trans }}</a>
+                </li>
+                <li class="nav-item-mobile active">
+                    <a class="nav-link" href="#projects">{{ 'projects'|trans }}</a>
+                </li>
+                <li class="nav-item-mobile active">
+                    <a class="nav-link" href="#contact">{{ 'contact'|trans }}</a>
+                </li>
+                <li class="nav-item-mobile active">
+                    <a class="nav-link"
+                       href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': app.request.locale == 'en' ? null : 'en'})) }}">
+                        <img class="langFlag" src="{{ asset('build/images/fr_en_flag.jpg')| imagine_filter('optimised') }}" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

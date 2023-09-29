@@ -1,0 +1,20 @@
+title: 'PAUQUIN ALEXANDRE'
+subtitle: 'Développeur web fullstack'
+myprojects: 'Mes projets'
+home: 'Accueil'
+about: 'À propos'
+projects: 'Projets'
+contact: 'Contact'
+mainOne: "En tant que développeur full stack passionné, mon objectif principal est de créer des sites et des applications de haute performance offrant une expérience utilisateur interactive et fluide. Je maîtrise les langages et les frameworks tant du front-end que du back-end, en mettant l'accent sur la conception d'interfaces attrayantes et intuitives, tout en développant une logique serveur solide."
+mainTwo: "Je suis passionné par la création de produits logiciels innovants et je m'efforce de fournir des solutions robustes et évolutives à travers toutes les étapes de mes projets professionnels."
+project1Date: '6 SEMAINES'
+project1Description: "Création d'une plateforme vidéo OTT pour l’entreprise, ORIGINS DIGITAL, en groupe de 4 lors de ma formation a la WILDCODE SCHOOL."
+githubRepo: 'Repo Github'
+see: 'Voir'
+project2Date: '24H'
+project2Description: "Création d'un site de vacances imaginaire pour des voyages dans la voie lacté en groupe de 4 lors de ma formation a la WILDCODE SCHOOL."
+project3Date: '4 SEMAINES'
+project3Description: "Refonte d’un site d’ébénisterie, EBCONCEPTION, en groupe de 5 lors de ma formation a la WILDCODE SCHOOL."
+email: "Contactez moi par email: "
+phone: "Ou par telephone au: "
+moreToCome: "Et bien plus a venir!"

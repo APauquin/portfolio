@@ -1,0 +1,50 @@
+<div id="landing" class="landingContainer d-flex flex-column flex-md-row snap-section">
+    <div class="arrowContainer mobileVersion">
+        <div class="arrowMobile arrow-first"></div>
+        <div class="arrowMobile arrow-second"></div>
+    </div>
+    <div class="landingLeftContainer d-flex flex-column justify-content-around w-100">
+    <div class="titleContainer">
+        <div class="desktopVersion">
+        <h1 class="mb-5 typewriter">{{ '<h1>' ~ 'title'|trans ~ '</h1>'|raw }}</h1>
+        </div>
+        <div class="mobileVersion">
+        <h1 class="typewriter">{{ '<h1>' ~ 'PAUQUIN'|raw }}</h1>
+        <h1 class="mb-5 typewriter">{{ 'ALEXANDRE' ~ '</h1>'|raw }}</h1>
+        </div>
+        <h2 id="decrypt">{{ 'subtitle'|trans }}</h2>
+    </div>
+
+    <div class="d-flex justify-content-around profileImage mobileVersion">
+        <img src="{{ asset('build/images/portrait_light.png')| imagine_filter('optimised') }}" alt="" class="mobileVersion portraitMobile" loading="lazy">
+    </div>
+
+    <div id="projectButtonContainer">
+        <a href="#projects" class="learn-more">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">{{ 'myprojects'|trans }}</span>
+        </a>
+    </div>
+    </div>
+
+    <div class="landingRightContainer d-flex justify-content-end w-100 desktopVersion">
+            <img src="{{ asset('build/images/portrait_light.png')| imagine_filter('optimised') }}" alt="" class="portrait" loading="lazy">
+    </div>
+
+    <aside class="d-flex flex-column justify-content-around desktopVersion">
+            <a href="https://www.linkedin.com/in/alexandre-pauquin-853892247/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/APauquin"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:alexandrep123@yahoo.com?subject=Contact%20PAUQUIN&body=Bonjour"><i class="fa-solid fa-envelope"></i></a>
+    </aside>
+</div>
+
+<div class="mouseContainer d-flex justify-content-around ">
+    <div class="scroll-msg-container desktopVersion">
+        <div class="scroll-msg-inner">
+            <div class="scroll-msg-wheel">
+            </div>
+        </div>
+    </div>
+</div>

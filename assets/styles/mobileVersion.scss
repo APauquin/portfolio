@@ -1,0 +1,248 @@
+.mobileVersion {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  body{
+    overflow: auto;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .snap-container {
+    scroll-snap-type: none;
+    min-height: 90vh;
+  }
+
+  .mobileVersion{
+    display: block;
+  }
+
+  .desktopVersion{
+    display:none !important;
+  }
+
+  .titleContainer{
+    margin-bottom: 0;
+  }
+
+  .titleContainer .mobileVersion{
+    width: fit-content;
+  }
+
+  nav button.navbar-toggler {
+    --bs-border-width: 0px;
+  }
+
+  nav button.navbar-toggler:focus {
+    --bs-border-width: 0px;
+    box-shadow: none !important;
+  }
+
+  .navbar-toggler span {
+    display: block;
+    background-color: var(--text-color);
+    height: 5px;
+    width: 40px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+  }
+
+  .navbar-toggler span.middle-bar {
+    background-color: var(--highlight-color);
+  }
+
+  .navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  .navbar-toggler span:nth-child(2) {
+    opacity: 1;
+  }
+
+  .navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  .navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+  }
+
+  .navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -38%) rotate(45deg);
+  }
+
+  .navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 38%) rotate(-45deg);
+  }
+
+  .mobileDropdown {
+    height: 100vh;
+    padding: 20vh 10vh;
+    background: linear-gradient(135deg,  var(--main-color) 0%, var(--secondary-color) 100%);
+  }
+
+  .mobileDropdown a.nav-link{
+    --bs-nav-link-color: rgba(255,255,255, 1);
+    --bs-nav-link-hover-color: rgba(255,255,255, 1);
+  }
+
+  .mobileDropdown .mobile {
+    padding: 1vh;
+  }
+
+  .collapsing.mobileDropdown {
+    transition: none !important;
+  }
+
+  //arrow mobile version
+  $ani-speed: 2s;
+  $ani-delay: 1s;
+
+  .arrowContainer {
+    transition: opacity 0.5s !important;
+  }
+
+  .arrowMobile {
+    opacity: 0;
+    position: absolute;
+    left: 46.5%;
+    top: 95%;
+    transform-origin: 46.5% 95%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .arrow-first {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+  }
+  .arrow-second {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+  }
+
+  .arrowMobile:before,
+  .arrowMobile:after {
+    background: var(--highlight-color);
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+  }
+
+  .arrowMobile:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+  }
+
+  .arrowMobile:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+  }
+
+  @keyframes arrow-movement {
+    0% {
+      opacity: 0;
+      top: 90%;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  //landing page img
+  .profileImage{
+  }
+
+  .portraitMobile{
+    height: 40vh;
+    border-radius: 50%;
+  }
+
+  //about page
+  .aproposTextContainer{
+    margin: 0;
+  }
+
+  .aproposTextContainer p{
+    font-size: 12px;
+  }
+
+  .btn{
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .technologiesContainer{
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    grid-gap: 0;
+  }
+
+  .aproposContainer {
+    height: auto;
+  }
+
+  .snap-container .aproposMainContainer{
+    height: auto !important;
+  }
+
+  //projects
+  .infoContainer h3 {
+    font-size: 1em;
+  }
+
+  .projectDescriptionContainer p {
+    padding: 3%;
+    font-size: 12px;
+  }
+
+  .linkAndGitContainer a {
+    margin-right: 0;
+    font-size: 12px;
+  }
+
+  li{
+    font-size: 12px;
+    padding: 1px !important;
+  }
+
+  .projectDescriptionContainer {
+    width: 100%;
+  }
+
+  .projectsContainer{
+    height: auto;
+  }
+
+  .projectContainer {
+    height: auto;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 5px solid var(--highlight-color);
+    margin-bottom: 1vh;
+    border-radius: 2%;
+  }
+
+  .linkAndGitContainer a{
+    font-size: 16px;
+  }
+}

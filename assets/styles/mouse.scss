@@ -1,0 +1,62 @@
+@use "sass:math";
+
+$mouse_color: var(--text-color);
+$mouse_width: 40px;
+$mouse_height: 70px;
+$border_width: 4px;
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($animations) {
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+$wheel_size: $border_width * 3;
+
+@include keyframes(mouse-scroll) {
+  0%   { top: 10%; opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 30%; opacity: 0; }
+}
+
+.scroll-msg-container {
+  width: $mouse_width + $border_width*2;
+  height: $mouse_height + $border_width*2;
+}
+
+.scroll-msg-inner {
+  width: $mouse_width;
+  height: $mouse_height;
+  position: relative;
+  border-radius: math.div($mouse_width, 2) + $border_width * 2;
+  border: $border_width solid $mouse_color;
+}
+
+.scroll-msg-wheel {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: $wheel_size;
+  height: $wheel_size;
+  margin-left: math.div(-$wheel_size, 2);
+  border-radius: 50%;
+  background-color: $mouse_color;
+
+  @include animation(mouse-scroll .9s infinite);
+}

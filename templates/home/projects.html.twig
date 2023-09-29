@@ -1,0 +1,82 @@
+<div id="projects" class="projectsContainer snap-section">
+    <h2>&lt;{{ 'projects'|trans }} /&gt;</h2>
+    <div class="projectContainer d-flex flex-column flex-md-row w-100">
+        <div class="projectImgContainer w-100 d-flex justify-content-center align-content-center mb-4 pb-md-0">
+            <img class="projectImg" src="{{ asset('build/images/project1.png')| imagine_filter('optimised') }}" alt="" loading="lazy">
+        </div>
+        <div class="infoContainer w-100 d-flex flex-column align-items-start align-items-md-end">
+            <h3>ORIGINS DIGITAL</h3>
+            <p class="highlighted">{{ 'project1Date'|trans }}</p>
+            <div class="projectDescriptionContainer">
+                <p>{{ 'project1Description'|trans }}</p>
+            </div>
+            <div class="projectTechs">
+                <ul class="highlighted">
+                    <li>HTML/CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>SYMFONY</li>
+                    <li>BOOTSTRAP</li>
+                </ul>
+            </div>
+            <div class="linkAndGitContainer d-flex">
+                <a href="https://github.com/WildCodeSchool/2023-03-remote-fr-php-origins-digital">{{ 'githubRepo'|trans }} <i class="fa-brands fa-github"></i></a>
+                <a href="https://origins-digital.remote-fr-1.wilders.dev/">{{ 'see'|trans }} <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectContainer d-flex flex-column flex-md-row-reverse w-100">
+        <div class="projectImgContainer w-100 d-flex justify-content-center align-content-center mb-4 pb-md-0">
+            <img class="projectImg" src="{{ asset('build/images/project2.png')| imagine_filter('optimised') }}" alt="" loading="lazy">
+        </div>
+        <div class="infoContainer w-100 d-flex flex-column">
+            <h3>Hackathon</h3>
+            <p class="highlighted">{{ 'project2Date'|trans }}</p>
+            <div class="projectDescriptionContainer">
+                <p>{{ 'project2Description'|trans }}</p>
+            </div>
+            <div class="projectTechs">
+                <ul class="highlighted">
+                    <li>HTML/CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>PHP</li>
+                    <li>API</li>
+                </ul>
+            </div>
+            <div class="linkAndGitContainer d-flex">
+                <a href="https://github.com/APauquin/hackathon_spaceMarines">{{ 'githubRepo'|trans }} <i class="fa-brands fa-github"></i></a>
+                <a href="https://space-marines.remote-fr-1.wilders.dev/">{{ 'see'|trans }} <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projectsContainer snap-section">
+    <div class="projectContainer d-flex flex-column flex-md-row w-100">
+        <div class="projectImgContainer w-100 d-flex justify-content-center align-content-center mb-4 pb-md-0">
+            <img class="projectImg" src="{{ asset('build/images/project3.png')| imagine_filter('optimised') }}" alt="" loading="lazy">
+        </div>
+        <div class="infoContainer w-100 d-flex flex-column align-items-start align-items-md-end">
+            <h3>EBCONCEPTION</h3>
+            <p class="highlighted">{{ 'project3Date'|trans }}</p>
+            <div class="projectDescriptionContainer">
+                <p>{{ 'project3Description'|trans }}</p>
+            </div>
+            <div class="projectTechs">
+                <ul class="highlighted">
+                    <li>HTML/CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+            <div class="linkAndGitContainer d-flex">
+                <a href="https://github.com/WildCodeSchool/2023-03-remote-fr-php-eb-conception">{{ 'githubRepo'|trans }} <i class="fa-brands fa-github"></i></a>
+                <a href="https://eb-conception.remote-fr-1.wilders.dev/">{{ 'see'|trans }} <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="moreContainer d-flex justify-content-center align-items-center mt-5 p-4">
+    <h4>{{ 'moreToCome'|trans }}</h4>
+    </div>
+</div>

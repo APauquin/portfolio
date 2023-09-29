@@ -1,0 +1,45 @@
+<div id="contact" class="contactContainer snap-section">
+    <h2>&lt;Contact /&gt;</h2>
+    <div class="contactMainContainer d-flex flex-column justify-content-around align-items-center">
+    <div class="contactTextContainer d-flex flex-column flex justify-content-center align-items-md-center">
+        <div class="contactText d-flex flex-md-row flex-column">
+            <p>{{ 'email'|trans }} </p>
+            <p class="highlighted">alexandrep123@yahoo.com</p>
+        </div>
+        <div class="contactText d-flex flex-md-row flex-column">
+            <p>{{ 'phone'|trans }} </p>
+            <p class="highlighted">+33 781 845 222</p>
+        </div>
+    </div>
+
+    <div class="contactImageContainer d-flex justify-content-center">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="contactImageContainer d-flex justify-content-center">
+            <!-- Light mode images are initially set as the `src`, dark mode images are stored in `data-dark-mode` -->
+            <img src="{{ asset('build/images/phone_light.jpg')| imagine_filter('optimised') }}"
+                 data-dark-mode="{{ asset('build/images/phone_dark.png')| imagine_filter('optimised') }}"
+                 alt="Phone Image" class="phone image-switch">
+
+            <img src="{{ asset('build/images/call_me_light.gif') }}"
+                 data-dark-mode="{{ asset('build/images/call_me_dark.gif') }}"
+                 alt="Call Me Image" class="overlay image-switch" loading="lazy">
+
+            <img src="{{ asset('build/images/contact_photo_light.png')| imagine_filter('optimised') }}"
+                 data-dark-mode="{{ asset('build/images/contact_photo_dark.png')| imagine_filter('optimised') }}"
+                 alt="Contact Photo" class="photoOverlay image-switch" loading="lazy">
+        </div>
+    </div>
+    </div>
+{#    {% for message in app.flashes('success') %}#}
+{#        <div class="alert alert-success">#}
+{#            {{ message }}#}
+{#        </div>#}
+{#    {% endfor %}#}
+{#    <div class="formContainer">#}
+{#    {{ form_start(contactForm) }}#}
+{#    {{ form_widget(contactForm) }}#}
+{#    {{ form_end(contactForm) }}#}
+{#    </div>#}
+</div>

@@ -1,15 +1,10 @@
 {% extends 'base.html.twig' %}
 
-
-{% block title %}Origins Digital{% endblock %}
-
 {% block body %}
-
-    <div class="container-fluid">
-        <h1>Atropos</h1>
-        <div class="atropos-container">
-            tests
-        </div>
-    </div>
-
+<div class="snap-container">
+    {% include 'home/landing.html.twig' %}
+    {% include 'home/about.html.twig' %}
+    {% include 'home/projects.html.twig' %}
+    {% include 'home/contact.html.twig' %}
+</div>
 {% endblock %}

@@ -1,10 +1,15 @@
+@import "_variables";
+@import "global";
+@import "snapScroll";
 @import "bootstrap/scss/bootstrap";
-
-body {
-    background-color: darkgrey;
-}
-
-.atropos-container{
-    background: wheat;
-    margin: 10%;
-}
+@import "navbar";
+@import "landing";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "light_dark_toggle";
+@import "mouse";
+@import "apropos";
+@import "aproposButton";
+@import "project.scss";
+@import "contact";
+@import "login";
+@import "mobileVersion";

@@ -1,0 +1,15 @@
+.snap-container {
+  height: 90vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100%;
+}
+
+.landingContainer, .aboutContainer, .projectsContainer {
+  scroll-snap-align: start;
+  height: 90vh;
+}

@@ -1,0 +1,180 @@
+.landingContainer {
+  background-image: url('/public/build/images/logo_lg_bg_light.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  height: 80vh;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.titleContainer {
+  margin-bottom: 20vh;
+  z-index: 2;
+}
+
+img.portrait {
+  height: 65vh;
+  border-radius: 100%;
+  margin-right: 5%;
+  margin-top: 15%;
+  object-fit: contain;
+  z-index: 0;
+  display: inline-block;
+}
+
+aside {
+  height: 90vh;
+  background: transparent;
+  width: 10%;
+  position: fixed;
+  z-index: 2;
+  top: 10vh;
+  right: 0;
+  font-size: 5rem;
+    a {
+      color: var(--text-color);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--highlight-color);
+        transition: color 1s ease;
+        transform: scale(1.05);
+        transition-duration: 1.5s;
+      }
+    }
+}
+
+@media (max-width: 1000px) {
+  aside {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  aside {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  aside {
+    font-size: 2rem;
+  }
+}
+
+.mouseContainer {
+  height: 10vh;
+}
+
+
+/* typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid var(--text-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  direction: ltr;
+  animation:
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--highlight-color) }
+}
+
+/* project button */
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  &.learn-more {
+    width: 12rem;
+    height: auto;
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: relative;
+      display: block;
+      margin: 0;
+      width: 3rem;
+      height: 3rem;
+      background: var(--highlight-color);
+      border-radius: 1.625rem;
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: transparent;
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+          &::before {
+            position: absolute;
+            content: '';
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.2rem solid var(--main-color);
+            border-right: 0.2rem solid var(--main-color);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .button-text {
+      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0.75rem 0;
+      margin: 0 0 0 1.85rem;
+      color: var(--text-color);
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+          background: var(--main-color);
+          transform: translate(1rem, 0) scale(1.5);
+        }
+      }
+    }
+    .button-text {
+      color: var(--main-color);
+    }
+  }
+}

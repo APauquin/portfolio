@@ -1,0 +1,11 @@
+.loginContainer {
+ margin: 20%;
+}
+
+.loginContainer form {
+ --bs-body-color: var(--main-color);
+}
+
+.loginContainer form label {
+ --bs-body-color: var(--text-color);
+}

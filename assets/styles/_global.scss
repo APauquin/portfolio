@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  --bs-body-font-family: 'IBM Plex Mono', monospace;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background: linear-gradient(135deg,  var(--main-color) 0%, var(--secondary-color) 100%);
+  transition: all 1.5s ease;
+  --bs-heading-color: var(--text-color);
+  --bs-body-color: var(--text-color);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+.highlighted {
+  color: var(--highlight-color);
+}
+

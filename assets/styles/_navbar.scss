@@ -1,0 +1,21 @@
+img.langFlag {
+  width: 40px;
+  height: 24px;
+  border-radius: 5px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  padding: 0 !important;
+}
+
+.nav-link {
+  --bs-nav-link-hover-color: var(--highlight-color);
+  --bs-nav-link-color: var(--text-color);
+}
+
+.mobileVersion li a {
+  font-size: 20px;
+}

@@ -1,0 +1,33 @@
+<div id="about" class="aproposContainer d-flex flex-column snap-section">
+    <h2>&lt;{{ 'about'|trans }} /&gt;</h2>
+    <div class="aproposMainContainer d-flex flex-column justify-content-center flex-md-row">
+        <div class="leftAproposContainer w-100 d-flex flex-column pt-1 pt-md-2 justify-content-between">
+            <div class="aproposTextContainer d-flex flex-column justify-content-around h-75">
+                <p>{{ 'mainOne'|trans }}</p>
+                <div></div>
+                <p>{{ 'mainTwo'|trans }}</p>
+            </div>
+            <a href="" class="btn CVButton">Curriculum Vitae (CV)</a>
+        </div>
+        <div class="rightAproposContainer w-100 d-flex flex-column justify-content-around">
+            <img src="{{ asset('build/images/alex-body-light-temp.png')| imagine_filter('optimised') }}"
+                 data-dark-mode="{{ asset('build/images/alex-body-dark-temp.png') }}"
+                 alt="Profile Picture" class="image-switch aproposPicture" loading="lazy">
+            <div class="technologiesContainer pt-3">
+                <img src="{{ asset('build/images/logo-html.png')| imagine_filter('optimised') }}" alt="" loading="lazy">
+                <img src="{{ asset('build/images/logo-css.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-js.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-bootstrap.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-figma.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-git.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-mysql.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-nodejs.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-php.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-react.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-sass.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-symfony.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+                <img src="{{ asset('build/images/logo-wordpress.png')| imagine_filter('optimised') }}" loading="lazy" alt="">
+            </div>
+        </div>
+    </div>
+</div>

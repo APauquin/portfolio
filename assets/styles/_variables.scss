@@ -1,0 +1,16 @@
+/* light mode colours */
+:root {
+  --main-color: #05445E;
+  --secondary-color: #189AB4;
+  --text-color: #D4F1F4;
+  --highlight-color: #75E6DA;
+  --dark-highlight-color: #E14171;
+}
+
+/* dark mode colours */
+body.darkMode {
+  --main-color: #0C0C1E;
+  --secondary-color: #1B2E3C;
+  --text-color: #F3E3E2;
+  --highlight-color: #E14171;
+}

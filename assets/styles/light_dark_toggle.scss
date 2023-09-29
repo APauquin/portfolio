@@ -1,0 +1,72 @@
+.toggle-container {
+  color: var(--main-color);
+  cursor: pointer;
+  transform: scale(1.3);
+  width: 70px;
+  height: 30px;
+  background-color: var(--highlight-color);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  transition: background .5s;
+  overflow: hidden;
+  margin-top: 23px;
+  .icon {
+    i {
+      stroke: var(--main-color);
+      stroke-width: 1.5px;
+      width: 19px;
+    }
+  }
+  .toggle-light-icon {
+    margin-left: 12px;
+    margin-top: 1px;
+    i {
+      transition: transform .9s;
+      transform: scale(1.2) translateX(0px);
+    }
+  }
+  .toggle-dark-icon {
+    margin-top: 2px;
+    i {
+      transform-origin: center;
+      transform: scale(.7) rotate(0deg);
+      position: relative;
+      right: 30px;
+      transition: transform .9s, right .5s;
+    }
+  }
+  .toggle-circle {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    left: 5%;
+    transition: left .5s;
+  }
+}
+
+#toggle-check {
+  display: none;
+  &:checked~.toggle-label .toggle-container {
+    background: var(--highlight-color);
+    .toggle-circle {
+      left: 62%;
+    }
+    .toggle-dark-icon {
+      i {
+        transform: scale(1.2);
+        right: -3px;
+      }
+    }
+    .toggle-light-icon {
+      i {
+        transform: scale(1.0) rotate(180deg) translateX(-30px);
+      }
+    }
+  }
+}
