@@ -10,3 +10,6 @@ app_home:
         _locale: 'fr'
     requirements:
         _locale: en|fr
+download_cv:
+    path: /download-cv
+    controller: App\Controller\FileController::downloadCv

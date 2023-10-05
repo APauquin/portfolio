@@ -19,6 +19,11 @@ Encore
         pattern: /\.(woff|woff2|ttf|eot|svg)$/
     })
     .copyFiles({
+        from: './assets/files',
+        to: 'files/[path][name].[ext]',
+        pattern: /\.(pdf)$/
+    })
+    .copyFiles({
         from: './assets/images',
 
         // optional target path, relative to the output dir

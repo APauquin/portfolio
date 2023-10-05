@@ -7,7 +7,7 @@
                 <div></div>
                 <p>{{ 'mainTwo'|trans }}</p>
             </div>
-            <a href="" class="btn CVButton">Curriculum Vitae (CV)</a>
+            <a download href="{{ path('download_cv') }}" class="btn CVButton">Curriculum Vitae (CV)</a>
         </div>
         <div class="rightAproposContainer w-100 d-flex flex-column justify-content-around">
             <img src="{{ asset('build/images/alex-body-light-temp.png')| imagine_filter('optimised') }}"
