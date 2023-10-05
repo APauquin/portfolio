@@ -22,4 +22,4 @@ class FileController extends AbstractController
 
         return $response;
     }
-};
+}
